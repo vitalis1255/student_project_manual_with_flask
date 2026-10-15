@@ -1,0 +1,13 @@
+[
+    {
+        "username": "user",
+        "password": "user"
+    },
+    {
+        "id": 1,
+        "username": "Izuchukwu",
+        "password": "vitalis1255@@@",
+        "confirm_password": "vitalis1255@@@",
+        "email": "talentedvitalis@gmail.com"
+    }
+]

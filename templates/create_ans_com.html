@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Create Question{% endblock %}
+
+{% block content %}
+{% if all_exists %}
+<div class="user">
+  <h3>Question Section</h3>
+  <form method="POST">
+    {{ form_question.hidden_tag() }}
+
+    {% for error in form_question.question_title.errors %}
+      <span class="text-error">{{error}}</span>
+    {% endfor %}
+
+    {{ form_question.question_title.label }}
+    {{ form_question.question_title(placeholder="Enter title of the question") }}
+
+    {{ form_question.subject_category.label }}
+    {{ form_question.subject_category(placeholder="Select subject retated to question title asked") }}
+
+    {{ form_question.question_details.label }}
+    {{ form_question.question_details(placeholder="Ask your question in details here") }}
+
+    <button type="submit" name="question_submit" class="btn">Save Question</button>
+  </form>
+</div>
+<hr/>
+<div class="user">
+  <h3>Answer Section</h3>
+  <form method="POST">
+    {{ form_answer.hidden_tag() }}
+
+    {{ form_answer.answer.label }}
+    {{ form_answer.answer() }}
+
+    <button type="submit" name="answer_submit" class="btn">Post Answer</button>
+  </form>
+</div>
+<hr/>
+<div class="user">
+  <h3>Comment Section</h3>
+  <form method="POST">
+    {{ form_comment.hidden_tag() }}
+
+    {{ form_comment.comment.label }}
+    {{ form_comment.comment(placeholder="comment on your answer") }}
+
+    <button type="submit" name="comment_submit" class="btn">Post Comment</button>
+  </form>
+</div>
+{% else %}
+ <p class="user-question">Question | Answer | Comment not available at the moment</p>
+{% endif %}
+
+<h3>Voting on the quality of answers Section</h3>
+<div class="voting">
+  <div id="upvote"></div>
+  <div id="downvote"></div>
+</div>
+<script src="{{url_for('js', filename='voting.js')}}"></script>
+{% endblock %}

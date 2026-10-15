@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home Page - Question Feed{% endblock %}
+
+{% block content %}
+<h3>All Questions</h3>
+  {% for question in questions %}
+   <div class="card">
+     <h3><a href="{{url_for('question_detail', question_id=question.id)}}">{{question.question_title}}</a></h3>
+    </div>
+  {% endfor %}
+
+{% endblock %}

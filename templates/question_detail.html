@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Question Details{% endblock %}
+
+{% block content %}
+<h2>User Details</h2>
+<div class="card">
+  <p><strong>Author Name: </strong>{{ question.username }}</p>
+  <p><strong>Authors's ID: </strong>{{ question.id }}</p>
+  <p><strong>Subject: </strong>{{ question.subject }}</p>
+  <p><strong>Upvote: </strong>{{ question.upvote }}</p>
+  <p><strong>Downvote: </strong>{{ question.downvote }}</p>
+  <p><strong>Answer: </strong>{{ question.answer }}</p>
+  <p><strong>Comment: </strong>{{ question.comment }}</p>
+  <p><strong>Submitted At: </strong>{{ question.submitted_at }}</p>
+</div>
+<div>
+  <h3><strong>Score: </strong>({{ question.upvote }} - {{ question.downvote }})</h3>
+</div>
+{% endblock %}
