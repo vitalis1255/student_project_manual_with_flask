@@ -12,7 +12,7 @@
     <div class="navbar">
       <h1>Welcome to Q&A Nexus Lite - Flask WTF Edition! </h1>
       <div class="contact-user">
-        <span>User: <strong>{{session.get('username')}}</strong>({{session.get('password')}})</span>
+        <span>User: <strong>{{session.get('username')}}</strong>({{session.get('username')}})</span>
         <a href="{{url_for('logout')}}" class="logout-btn">Logout</a>
       </div>
     </div>

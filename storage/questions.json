@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "author's name": "john",
+        "question_id": 1,
+        "user_id": 3,
+        "question_title": "what is the chemical formular of sodium chloride?",
+        "subject_category": "chemistry",
+        "question_details": "write out the chemical formular of sodium chloride and calculate its molar mass",
+        "submitted_at": "2026-10-16:17:12:32"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "question_id": 2,
+        "user_id": 1,
+        "question_title": "calculate 2 +6",
+        "subject_category": "mathematics",
+        "question_details": "perform an addition operation on 2 + 6",
+        "submitted_at": "2026-10-16:17:24:05"
+    }
+]

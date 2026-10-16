@@ -2,7 +2,6 @@
 {% block title %}Create Question{% endblock %}
 
 {% block content %}
-{% if all_exists %}
 <div class="user">
   <h3>Question Section</h3>
   <form method="POST">
@@ -48,14 +47,5 @@
     <button type="submit" name="comment_submit" class="btn">Post Comment</button>
   </form>
 </div>
-{% else %}
- <p class="user-question">Question | Answer | Comment not available at the moment</p>
-{% endif %}
 
-<h3>Voting on the quality of answers Section</h3>
-<div class="voting">
-  <div id="upvote"></div>
-  <div id="downvote"></div>
-</div>
-<script src="{{url_for('js', filename='voting.js')}}"></script>
 {% endblock %}

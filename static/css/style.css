@@ -126,10 +126,8 @@ form textarea:focus {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  width: 720px;
+  width: 100%;
   transition: background-color 0.2s;
-  display: flex;
-  justify-content: center;
   text-decoration: none;
 }
 

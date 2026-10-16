@@ -8,7 +8,7 @@ class AskQuestionForm(FlaskForm):
   """
   Handles Question Form Field
   """
-  question_title = StringField("Question", validators=[DataRequired(message="Enter between 2 and 50 characters"),Length(min=2, max=50)])
+  question_title = StringField("Question Title", validators=[DataRequired(message="Enter between 2 and 50 characters"),Length(min=2, max=50)])
   subject_category = SelectField("Subject Category",choices=[
     ("mathematics","Mathematics"),
     ("chemistry","Chemistry"),
@@ -16,7 +16,7 @@ class AskQuestionForm(FlaskForm):
     ("physics","Physics"),
     ("digital technology","Digital Technology"),
   ],validators=[DataRequired(message="Subject is needed")])
-  question_details = TextAreaField("Question in Details",validators=[DataRequired(message="Enter between 2 and 180 characters"),Length(min=2, max=180)])
+  question_details = TextAreaField("Question Details",validators=[DataRequired(message="Enter between 2 and 180 characters"),Length(min=2, max=180)])
   submit = SubmitField("Save Question")
 
 
@@ -35,7 +35,7 @@ class CommentForm(FlaskForm):
   """
   Handles Comment on answers
   """
-  comment = StringField("Comment Your Answer",validators=[DataRequired(message="Enter comment between 2 and 120 characters"), Length(min=2, max=120)])
+  comment = StringField("Comment on Your Answer",validators=[DataRequired(message="Enter comment between 2 and 120 characters"), Length(min=2, max=120)])
   submit = SubmitField("Post Comment")
 
 
@@ -55,5 +55,4 @@ class LoginForm(FlaskForm):
   """Handles User Login"""
   username = StringField("Username",validators=[DataRequired(message="Username is needed"),Length(min=2, max=20)])
   password = PasswordField("Password",validators=[DataRequired(message="Password is needed"),Length(min=2, max=30)])
-  email = StringField("Email", validators=[DataRequired(message="Enter correct email"), Email()])
   submit = SubmitField("Login")

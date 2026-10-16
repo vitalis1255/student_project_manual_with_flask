@@ -11,8 +11,8 @@ app.secret_key = "student_manual_wtf_create_forms_with_flask_2026"
 
 DATA_DIR = 'storage'
 USERS_FILE = os.path.join(DATA_DIR,'users.json')
-QUESTION_FILE  =os.path.join(DATA_DIR,'questions.json')
-COMMENT_FILE = os.path.join(DATA_DIR,'comments.json')
+QUESTIONS_FILE  =os.path.join(DATA_DIR,'questions.json')
+COMMENTS_FILE = os.path.join(DATA_DIR,'comments.json')
 ANSWERS_FILE = os.path.join(DATA_DIR,'answers.json')
 VOTING_RECORDS_FILE = os.path.join(DATA_DIR,'votings.json')
 
@@ -29,12 +29,12 @@ def storage_db():
         }
       ], f, indent=4)
 
-  if not os.path.exists(QUESTION_FILE):
-    with open(QUESTION_FILE, 'w', encoding='utf-8') as f:
+  if not os.path.exists(QUESTIONS_FILE):
+    with open(QUESTIONS_FILE, 'w', encoding='utf-8') as f:
       json.dump([], f, indent=4)
 
-  if not os.path.exists(COMMENT_FILE):
-    with open(COMMENT_FILE, 'w', encoding='utf-8') as f:
+  if not os.path.exists(COMMENTS_FILE):
+    with open(COMMENTS_FILE, 'w', encoding='utf-8') as f:
       json.dump([], f, indent=4)
 
   if not os.path.exists(ANSWERS_FILE):
@@ -81,13 +81,13 @@ def create_user():
       flash(f"Username {new_username} already exists!")
     else:
       users.append({
-        "id":1,
+        "user_id":len(users) + 1,
         "username":new_username,
         "password":form_user.password.data,
         "confirm_password":form_user.confirm_password.data,
         "email":form_user.email.data
       })
-      save_json(USERS_FILE,users)
+      save_json(USERS_FILE, users)
       flash(f"Account Created Successfully for {new_username}!")
       return redirect(url_for('create_user'))
   return render_template('create_user.html',form_user=form_user,users=users)
@@ -103,6 +103,7 @@ def login():
   if form.validate_on_submit():
     username = form.username.data.strip()
     password = form.password.data.strip()
+    
 
     #load users file
     users = load_json(USERS_FILE)
@@ -115,8 +116,10 @@ def login():
         f"Account for {username} or {password} does not exist. Go and create an account or check your spellings"
       )
       return redirect(url_for("login"))
+    
     session["username"] = user["username"]
     session["password"] = user["password"]
+    session["user_id"] = user["user_id"]
     flash(f"Login Successful {user["username"]}!")
     return redirect(url_for('create_ans_com'))
   return render_template('login.html', form=form)    
@@ -130,18 +133,72 @@ def logout():
   flash(
     "You have been logged out successfully"
   )
-  return redirect(url_for('login'))
+  return redirect(url_for('create_user'))
 
 
 @app.route('/question/answer/comment', methods=['GET','POST'])
 def create_ans_com():
   """Handles Question|Answers|Comment"""
-  if session.get('username') != 'username':
-    return redirect(url_for('login'))
+  form_question = AskQuestionForm()
+  form_comment = CommentForm()
+  form_answer = AnswerForm()
+
+  
+  questions = load_json(QUESTIONS_FILE)
+  comments = load_json(COMMENTS_FILE)
+  answers = load_json(ANSWERS_FILE)
   
 
+  if form_question.validate_on_submit() and 'question_submit' in request.form:
+    questions.append({
+      "author's name":session["username"],
+      "question_id":len(questions) + 1,
+      "user_id":session["user_id"],
+      "question_title":form_question.question_title.data,
+      "subject_category":form_question.subject_category.data,
+      "question_details":form_question.question_details.data,
+      "submitted_at":datetime.now().strftime("%Y-%m-%d:%H:%M:%S")
+    })
+    save_json(QUESTIONS_FILE,questions)
+    flash("Question added successfully to bank")
+    for q in questions:
+      if q:
+        session["question_id"] = q["question_id"]
+    return redirect(url_for('create_ans_com'))
 
-  return render_template('create_ans_com.html')
+  if form_answer.validate_on_submit() and 'answer_submit' in request.form:
+    answers.append({
+      "author's name":session["username"],
+      "answer_id":len(answers) + 1,
+      "user_id":session["user_id"],
+      "question_id":session["question_id"],
+      "form_answer":form_answer.answer.data,
+      "submitted_at":datetime.now().strftime("%Y-%m-%d:%H:%M:%S")
+    })
+    save_json(ANSWERS_FILE,answers)
+    flash("Answer added successfully to the bank")
+    for a in answers:
+      if a:
+        session["answer_id"] = a["answer_id"]
+    return redirect(url_for('create_ans_com'))
+
+
+  if form_comment.validate_on_submit() and 'comment_submit' in request.form:
+    comments.append({
+      "author's name":session["username"],
+      "question_id":session["question_id"],
+      "answer_id":session["answer_id"],
+      "user_id":session["user_id"],
+      "comment_id":len(comments) + 1,
+      "comment":form_comment.comment.data,
+      "submitted_at":datetime.now().strftime("%Y-%m-%d:%H:%M:%S")
+    })
+    save_json(COMMENTS_FILE,comments)
+    flash("Comment added successfully to bank")
+    return redirect(url_for('create_ans_com'))
+
+
+  return render_template('create_ans_com.html',form_question=form_question,form_comment=form_comment,form_answer=form_answer,questions=questions,comments=comments,answers=answers)
   
 
 

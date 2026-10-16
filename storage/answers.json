@@ -1,1 +1,18 @@
-[]
+[
+    {
+        "author's name": "john",
+        "answer_id": 1,
+        "user_id": 3,
+        "question_id": 1,
+        "form_answer": "nacl",
+        "submitted_at": "2026-10-16:17:14:15"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 2,
+        "user_id": 1,
+        "question_id": 2,
+        "form_answer": "The answer is 8",
+        "submitted_at": "2026-10-16:17:24:29"
+    }
+]
