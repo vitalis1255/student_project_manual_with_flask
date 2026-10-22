@@ -1,5 +1,5 @@
 from flask import Flask,url_for,render_template,redirect,request,flash,session
-from forms import AskQuestionForm,AnswerForm,CreateUserForm,CommentForm,LoginForm
+from forms import AskQuestionForm,AnswerForm,CreateUserForm,CommentForm,LoginForm,VoteForm
 import os
 import json
 from datetime import datetime
@@ -142,13 +142,22 @@ def create_ans_com():
   form_question = AskQuestionForm()
   form_comment = CommentForm()
   form_answer = AnswerForm()
+  vote_form = VoteForm()
 
   
   questions = load_json(QUESTIONS_FILE)
   comments = load_json(COMMENTS_FILE)
   answers = load_json(ANSWERS_FILE)
-  
+  voters = load_json(VOTING_RECORDS_FILE)
 
+
+  
+  score = 0
+  upvotes = 0
+  downvotes = 0
+
+  
+  #Question Section
   if form_question.validate_on_submit() and 'question_submit' in request.form:
     questions.append({
       "author's name":session["username"],
@@ -166,6 +175,8 @@ def create_ans_com():
         session["question_id"] = q["question_id"]
     return redirect(url_for('create_ans_com'))
 
+
+  #Answer Section
   if form_answer.validate_on_submit() and 'answer_submit' in request.form:
     answers.append({
       "author's name":session["username"],
@@ -182,7 +193,7 @@ def create_ans_com():
         session["answer_id"] = a["answer_id"]
     return redirect(url_for('create_ans_com'))
 
-
+  #Comment Section
   if form_comment.validate_on_submit() and 'comment_submit' in request.form:
     comments.append({
       "author's name":session["username"],
@@ -195,10 +206,60 @@ def create_ans_com():
     })
     save_json(COMMENTS_FILE,comments)
     flash("Comment added successfully to bank")
+    for c in comments:
+      if c:
+        session["comment_id"] = c["comment_id"]
     return redirect(url_for('create_ans_com'))
 
+  #Voting Section
+  if request.method == "POST" and "vote_type" in request.form:
+    if not vote_form.validate_on_submit():
+      flash("Vote form validation failed.")
+      return redirect(url_for("create_ans_com"))
+    
+    #answer_id = request.form.get("answer_id",type=int)
+    vote_type = request.form.get("vote_type")
 
-  return render_template('create_ans_com.html',form_question=form_question,form_comment=form_comment,form_answer=form_answer,questions=questions,comments=comments,answers=answers)
+    
+    
+    if vote_type not in ("upvote","downvote"):
+      flash("Invalid Vote!")
+      return redirect(url_for('create_ans_com')) 
+
+    for ans in answers:
+      session["answer_id"] = ans["answer_id"]#check tommorrow
+    voters.append({
+      "author's name":session["username"],
+      "answer_id":session["answer_id"],
+      "voter_id":len(voters) + 1,
+      "vote_type":vote_type
+    })
+    save_json(VOTING_RECORDS_FILE,voters)
+    flash(f"{session["username"]} voted successfully")
+    return redirect(url_for('create_ans_com'))
+
+  #Calculate upvotes and downvotes
+  vote_summary = {}
+  for answer in answers:
+    current_answer_id = answer["answer_id"]
+
+    upvotes = 0
+    downvotes = 0
+    for vote in voters:
+      if  vote["answer_id"] == current_answer_id:
+        if vote["vote_type"] == "upvote":
+          upvotes+=1
+        elif vote["vote_type"] == "downvote":
+          downvotes+=1
+    
+    
+    vote_summary[current_answer_id] = {
+    "upvotes":upvotes,
+    "downvotes":downvotes,
+    "score":upvotes - downvotes
+    }
+    
+  return render_template('create_ans_com.html',form_question=form_question,form_comment=form_comment,form_answer=form_answer,questions=questions,comments=comments,answers=answers,voters=voters,vote_form=vote_form,vote_summary=vote_summary)
   
 
 

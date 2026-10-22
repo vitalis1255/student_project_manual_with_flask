@@ -1,1 +1,170 @@
-[]
+[
+    {
+        "author's name": "john",
+        "answer_id": "",
+        "voter_id": 1,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": "",
+        "voter_id": 2,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 1,
+        "voter_id": 3,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 1,
+        "voter_id": 4,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 1,
+        "voter_id": 5,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 1,
+        "voter_id": 6,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 1,
+        "voter_id": 7,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 1,
+        "voter_id": 8,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 1,
+        "voter_id": 9,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 1,
+        "voter_id": 10,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 1,
+        "voter_id": 11,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 12,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 13,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 14,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 15,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 16,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "voter_id": 17,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 38,
+        "voter_id": 18,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 39,
+        "voter_id": 19,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 20,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 21,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 22,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 23,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 24,
+        "vote_type": "downvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 25,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "voter_id": 26,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 41,
+        "voter_id": 27,
+        "vote_type": "upvote"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 41,
+        "voter_id": 28,
+        "vote_type": "upvote"
+    }
+]

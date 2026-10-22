@@ -16,5 +16,23 @@
         "comment_id": 2,
         "comment": "very good answer. Well done",
         "submitted_at": "2026-10-16:17:24:51"
+    },
+    {
+        "author's name": "john",
+        "question_id": 3,
+        "answer_id": 3,
+        "user_id": 3,
+        "comment_id": 3,
+        "comment": "very good answer. Well done",
+        "submitted_at": "2026-10-19:14:27:42"
+    },
+    {
+        "author's name": "john",
+        "question_id": 5,
+        "answer_id": 4,
+        "user_id": 3,
+        "comment_id": 4,
+        "comment": "You gave a wonderful answer.",
+        "submitted_at": "2026-10-21:19:31:48"
     }
 ]

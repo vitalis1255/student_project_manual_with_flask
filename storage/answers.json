@@ -14,5 +14,317 @@
         "question_id": 2,
         "form_answer": "The answer is 8",
         "submitted_at": "2026-10-16:17:24:29"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 3,
+        "user_id": 3,
+        "question_id": 3,
+        "form_answer": "Answer is 4",
+        "submitted_at": "2026-10-19:14:27:26"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 4,
+        "user_id": 3,
+        "question_id": 5,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-21:19:31:14"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 5,
+        "user_id": 3,
+        "question_id": 5,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-21:19:43:58"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 6,
+        "user_id": 3,
+        "question_id": 5,
+        "form_answer": "answer is 80",
+        "submitted_at": "2026-10-21:19:58:08"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 7,
+        "user_id": 3,
+        "question_id": 5,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-21:20:05:01"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 8,
+        "user_id": 3,
+        "question_id": 5,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-21:20:17:07"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 9,
+        "user_id": 3,
+        "question_id": 6,
+        "form_answer": "A wave is a moving ridge or disturbance on the surface of water.",
+        "submitted_at": "2026-10-21:20:20:49"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 10,
+        "user_id": 3,
+        "question_id": 6,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-21:20:50:40"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 11,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 400",
+        "submitted_at": "2026-10-21:21:01:09"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 12,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:13:47:46"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 13,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:13:52:42"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 14,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:00:26"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 15,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:13:44"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 16,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:19:46"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 17,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:22:47"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 18,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:27:37"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 19,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:30:27"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 20,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:34:02"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 21,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 80",
+        "submitted_at": "2026-10-22:14:50:23"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 22,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:14:53:35"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 23,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:15:09:56"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 24,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:15:12:18"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 25,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:15:21:59"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 26,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:15:25:09"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 27,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 80",
+        "submitted_at": "2026-10-22:15:26:43"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 28,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:15:34:44"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 29,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 50",
+        "submitted_at": "2026-10-22:15:54:46"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 30,
+        "user_id": 3,
+        "question_id": 7,
+        "form_answer": "answer is 80",
+        "submitted_at": "2026-10-22:16:10:39"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 31,
+        "user_id": 3,
+        "question_id": 8,
+        "form_answer": "answer is 7",
+        "submitted_at": "2026-10-22:16:12:52"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 32,
+        "user_id": 3,
+        "question_id": 8,
+        "form_answer": "answer is 8",
+        "submitted_at": "2026-10-22:16:15:57"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 33,
+        "user_id": 3,
+        "question_id": 8,
+        "form_answer": "answer is 40",
+        "submitted_at": "2026-10-22:16:17:54"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 34,
+        "user_id": 3,
+        "question_id": 8,
+        "form_answer": "answer is 90",
+        "submitted_at": "2026-10-22:16:23:04"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 35,
+        "user_id": 3,
+        "question_id": 9,
+        "form_answer": "answer is 29",
+        "submitted_at": "2026-10-22:16:26:31"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 36,
+        "user_id": 1,
+        "question_id": 10,
+        "form_answer": "answer is 170",
+        "submitted_at": "2026-10-22:16:29:12"
+    },
+    {
+        "author's name": "Izuchukwu",
+        "answer_id": 37,
+        "user_id": 1,
+        "question_id": 11,
+        "form_answer": "answer is 9",
+        "submitted_at": "2026-10-22:20:09:33"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 38,
+        "user_id": 3,
+        "question_id": 12,
+        "form_answer": "The answer is 144",
+        "submitted_at": "2026-10-22:20:28:34"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 39,
+        "user_id": 3,
+        "question_id": 12,
+        "form_answer": "answer is 145",
+        "submitted_at": "2026-10-22:20:29:08"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 40,
+        "user_id": 3,
+        "question_id": 13,
+        "form_answer": "answer is NACL",
+        "submitted_at": "2026-10-22:20:30:54"
+    },
+    {
+        "author's name": "john",
+        "answer_id": 41,
+        "user_id": 3,
+        "question_id": 14,
+        "form_answer": "chemistry is the study of chemical substances and their reactions",
+        "submitted_at": "2026-10-22:20:53:22"
     }
 ]

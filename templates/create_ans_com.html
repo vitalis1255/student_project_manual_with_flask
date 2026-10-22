@@ -12,7 +12,7 @@
     {% endfor %}
 
     {{ form_question.question_title.label }}
-    {{ form_question.question_title(placeholder="Enter title of the question") }}
+    {{ form_question.question_title(placeholder="Enter Question Title") }}
 
     {{ form_question.subject_category.label }}
     {{ form_question.subject_category(placeholder="Select subject retated to question title asked") }}
@@ -34,6 +34,30 @@
 
     <button type="submit" name="answer_submit" class="btn">Post Answer</button>
   </form>
+
+  <h2 class="user-answer">User Answer Voting Section</h2>
+  <div class="voting">
+      {% set result = vote_summary.get(session.answer_id,{}) %}
+      <p>Upvotes: {{ result.get('upvotes', 0) }}</p>
+      <p>Downvotes: {{ result.get('downvotes',0) }}</p>
+      <p>Score: {{ result.get('score',0) }}</p>
+     <form method="POST" action="{{ url_for('create_ans_com')}}">
+       {{ vote_form.csrf_token }}
+      
+      <div class="vote">
+        <div class="up-vote">
+          <button type="submit" name="vote_type" value="upvote" class="js-upvote upvote">
+            <img src="{{url_for('static', filename='image/hand-thumbs-up.svg')}}" class="up-image" alt="upvote"> 
+          </button>
+        </div>
+        <div class="down-vote">
+          <button type="submit" name="vote_type" value="downvote" class="js-downvote downvote">
+            <img src="{{url_for('static', filename='image/hand-thumbs-down.svg')}}" class="down-image" alt="downvote"> 
+          </button>
+        </div>
+      </div>
+     </form>
+  </div>
 </div>
 <hr/>
 <div class="user">
@@ -47,5 +71,5 @@
     <button type="submit" name="comment_submit" class="btn">Post Comment</button>
   </form>
 </div>
-
+<script src="{{url_for('static', filename='js/voting.js')}}"></script>
 {% endblock %}
