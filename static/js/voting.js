@@ -1,15 +1,10 @@
-function UpvoteAndDownvote () {
-  const up = document.querySelector('.js-upvote');
-  const down = document.querySelector('.js-downvote');
+const button_upvote = document.querySelector('.js-upvote');
+button_upvote.addEventListener('click', () =>{
+  button_upvote.classList.toggle('active');
+});
 
-  up.addEventListener('click', ()=>{
-    up.classList.add();
-    down.classList.remove()
-  })
-  down.addEventListener('click', ()=>{
-    up.classList.remove();
-    down.classList.add();
-  })
+const button_downvote = document.querySelector('.js-downvote');
+button_downvote.addEventListener('click', () =>{
+  button_downvote.classList.toggle('active');
+});
 
-}
-UpvoteAndDownvote()

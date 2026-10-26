@@ -4,16 +4,29 @@
 {% block content %}
 <h2>User Details</h2>
 <div class="card">
-  <p><strong>Author Name: </strong>{{ question.username }}</p>
-  <p><strong>Authors's ID: </strong>{{ question.id }}</p>
-  <p><strong>Subject: </strong>{{ question.subject }}</p>
-  <p><strong>Upvote: </strong>{{ question.upvote }}</p>
-  <p><strong>Downvote: </strong>{{ question.downvote }}</p>
-  <p><strong>Answer: </strong>{{ question.answer }}</p>
-  <p><strong>Comment: </strong>{{ question.comment }}</p>
+  <p><strong>User Name: </strong>{{ user.username }}</p>
+  <p><strong>User ID: </strong>{{ user.user_id }}</p>
+  <p><strong>Subject Category: </strong>{{ question.subject_category }}</p>
+
+  <p><strong>Upvote: </strong>{{ voter.get("upvotes") }}</p>
+  <p><strong>Downvote: </strong>{{ voter.get("downvotes") }}</p>
+  <h3><strong>Score: </strong>{{ voter.get("score") }}</h3>
+
+  {% if ans %}
+  <p><strong>Answer: </strong>{{ ans.form_answer }}</p>
+  {% else %}
+  <p>No answer is available</p>
+  {% endif %}
+
+  {% if comment %}
+  <p><strong>Comment: </strong>{{ comment.comment }}</p>
+  {% else %}
+  <p>No comment is available</p>
+  {% endif %}
   <p><strong>Submitted At: </strong>{{ question.submitted_at }}</p>
 </div>
 <div>
-  <h3><strong>Score: </strong>({{ question.upvote }} - {{ question.downvote }})</h3>
+  
 </div>
+<a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
 {% endblock %}

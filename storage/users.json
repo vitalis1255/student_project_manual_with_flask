@@ -1,30 +1,23 @@
 [
     {
         "user_id": 1,
-        "username": "Izuchukwu",
-        "password": "vitalis1255@@@",
-        "confirm_password": "vitalis1255@@@",
-        "email": "talentedvitalis@gmail.com"
-    },
-    {
-        "user_id": 2,
         "username": "mercy",
         "password": "mercy",
         "confirm_password": "mercy",
-        "email": "vitalis.onyeke.175508@unn.edu.ng"
+        "email": "mercy@gmail.com"
     },
     {
-        "user_id": 3,
+        "user_id": 2,
         "username": "john",
         "password": "john",
         "confirm_password": "john",
         "email": "john@gmail.com"
     },
     {
-        "user_id": 4,
-        "username": "amaka",
-        "password": "amaka",
-        "confirm_password": "amaka",
-        "email": "amaka@gmail.com"
+        "user_id": 3,
+        "username": "oko",
+        "password": "oko",
+        "confirm_password": "oko",
+        "email": "oko@gmail.com"
     }
 ]

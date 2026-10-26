@@ -10,11 +10,11 @@ class AskQuestionForm(FlaskForm):
   """
   question_title = StringField("Question Title", validators=[DataRequired(message="Enter between 2 and 50 characters"),Length(min=2, max=50)])
   subject_category = SelectField("Subject Category",choices=[
-    ("mathematics","Mathematics"),
-    ("chemistry","Chemistry"),
-    ("igbo","Igbo"),
-    ("physics","Physics"),
-    ("digital technology","Digital Technology"),
+    ("Mathematics","Mathematics"),
+    ("Chemistry","Chemistry"),
+    ("Igbo","Igbo"),
+    ("Physics","Physics"),
+    ("Digital Technology","Digital Technology"),
   ],validators=[DataRequired(message="Subject is needed")])
   question_details = TextAreaField("Question Details",validators=[DataRequired(message="Enter between 2 and 180 characters"),Length(min=2, max=180)])
   submit = SubmitField("Save Question")

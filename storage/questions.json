@@ -1,128 +1,74 @@
 [
     {
-        "author's name": "john",
+        "author_name": "mercy",
         "question_id": 1,
-        "user_id": 3,
-        "question_title": "what is the chemical formular of sodium chloride?",
-        "subject_category": "chemistry",
-        "question_details": "write out the chemical formular of sodium chloride and calculate its molar mass",
-        "submitted_at": "2026-10-16:17:12:32"
+        "user_id": 1,
+        "question_title": "square root",
+        "subject_category": "mathematics",
+        "question_details": "Find the square root of 144?",
+        "submitted_at": "2026-10-26:17:29:40"
     },
     {
-        "author's name": "Izuchukwu",
+        "author_name": "mercy",
         "question_id": 2,
         "user_id": 1,
-        "question_title": "calculate 2 +6",
-        "subject_category": "mathematics",
-        "question_details": "perform an addition operation on 2 + 6",
-        "submitted_at": "2026-10-16:17:24:05"
+        "question_title": "chemical formular",
+        "subject_category": "chemistry",
+        "question_details": "what is the chemical formular of sodium chloride?",
+        "submitted_at": "2026-10-26:17:31:34"
     },
     {
-        "author's name": "john",
+        "author_name": "john",
         "question_id": 3,
-        "user_id": 3,
-        "question_title": "solve 2x + 8 = 0",
-        "subject_category": "mathematics",
-        "question_details": "Find the root of x in the question above",
-        "submitted_at": "2026-10-19:14:26:48"
+        "user_id": 2,
+        "question_title": "Telecommunication",
+        "subject_category": "digital technology",
+        "question_details": "Explain in details, Telecommunication?",
+        "submitted_at": "2026-10-26:18:08:25"
     },
     {
-        "author's name": "john",
+        "author_name": "oko",
         "question_id": 4,
         "user_id": 3,
-        "question_title": "square root",
-        "subject_category": "mathematics",
-        "question_details": "Find the square root of 81?",
-        "submitted_at": "2026-10-19:16:02:11"
-    },
-    {
-        "author's name": "john",
-        "question_id": 5,
-        "user_id": 3,
-        "question_title": "Arithmetic",
-        "subject_category": "mathematics",
-        "question_details": "if a = 30, b = 50, c = 20. Calculate the sum of a,b,c?",
-        "submitted_at": "2026-10-21:19:30:48"
-    },
-    {
-        "author's name": "john",
-        "question_id": 6,
-        "user_id": 3,
-        "question_title": "wave",
+        "question_title": "Equation of motion",
         "subject_category": "physics",
-        "question_details": "what is a wave?",
-        "submitted_at": "2026-10-21:20:19:07"
+        "question_details": "if u is 4m/s, s = 20m, using g=10m/s2, Find V in m/s?",
+        "submitted_at": "2026-10-26:19:41:15"
     },
     {
-        "author's name": "john",
+        "author_name": "john",
+        "question_id": 5,
+        "user_id": 2,
+        "question_title": "Ahiriokwu",
+        "subject_category": "igbo",
+        "question_details": "Gini bu ahiriokwu?",
+        "submitted_at": "2026-10-26:20:12:44"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 6,
+        "user_id": 1,
+        "question_title": "addition",
+        "subject_category": "Mathematics",
+        "question_details": "add 2 and 40",
+        "submitted_at": "2026-10-26:21:16:33"
+    },
+    {
+        "author_name": "mercy",
         "question_id": 7,
-        "user_id": 3,
-        "question_title": "Arithmetic",
-        "subject_category": "mathematics",
-        "question_details": "multiply 20 * 20",
-        "submitted_at": "2026-10-21:21:00:44"
+        "user_id": 1,
+        "question_title": "definition of physics",
+        "subject_category": "Physics",
+        "question_details": "what is physics?",
+        "submitted_at": "2026-10-26:21:47:34"
     },
     {
-        "author's name": "john",
+        "author_name": "mercy",
         "question_id": 8,
-        "user_id": 3,
-        "question_title": "Arithmetic",
-        "subject_category": "mathematics",
-        "question_details": "add 2 and 5",
-        "submitted_at": "2026-10-22:16:12:37"
-    },
-    {
-        "author's name": "john",
-        "question_id": 9,
-        "user_id": 3,
-        "question_title": "calculate sum",
-        "subject_category": "mathematics",
-        "question_details": "solve a and g if a = 9, and g=20",
-        "submitted_at": "2026-10-22:16:26:17"
-    },
-    {
-        "author's name": "Izuchukwu",
-        "question_id": 10,
         "user_id": 1,
-        "question_title": "multiplication",
-        "subject_category": "mathematics",
-        "question_details": "multiply a and b if a = 90, and b = 80",
-        "submitted_at": "2026-10-22:16:28:55"
-    },
-    {
-        "author's name": "Izuchukwu",
-        "question_id": 11,
-        "user_id": 1,
-        "question_title": "square root",
-        "subject_category": "mathematics",
-        "question_details": "Find the square root of 81?",
-        "submitted_at": "2026-10-22:20:09:12"
-    },
-    {
-        "author's name": "john",
-        "question_id": 12,
-        "user_id": 3,
-        "question_title": "square root",
-        "subject_category": "mathematics",
-        "question_details": "Find the square of 12?",
-        "submitted_at": "2026-10-22:20:28:15"
-    },
-    {
-        "author's name": "john",
-        "question_id": 13,
-        "user_id": 3,
-        "question_title": "what is the chemical formular of sodium chloride?",
-        "subject_category": "chemistry",
-        "question_details": "write out the chemical formular of sodium chloride",
-        "submitted_at": "2026-10-22:20:30:34"
-    },
-    {
-        "author's name": "john",
-        "question_id": 14,
-        "user_id": 3,
-        "question_title": "definition of chemistry",
-        "subject_category": "chemistry",
-        "question_details": "In details, explain chemistry?",
-        "submitted_at": "2026-10-22:20:52:27"
+        "question_title": "computer",
+        "subject_category": "Digital Technology",
+        "question_details": "define computer",
+        "submitted_at": "2026-10-26:21:53:46"
     }
 ]

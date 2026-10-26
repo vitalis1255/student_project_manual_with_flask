@@ -37,22 +37,18 @@
 
   <h2 class="user-answer">User Answer Voting Section</h2>
   <div class="voting">
-      {% set result = vote_summary.get(session.answer_id,{}) %}
-      <p>Upvotes: {{ result.get('upvotes', 0) }}</p>
-      <p>Downvotes: {{ result.get('downvotes',0) }}</p>
-      <p>Score: {{ result.get('score',0) }}</p>
      <form method="POST" action="{{ url_for('create_ans_com')}}">
        {{ vote_form.csrf_token }}
       
       <div class="vote">
         <div class="up-vote">
           <button type="submit" name="vote_type" value="upvote" class="js-upvote upvote">
-            <img src="{{url_for('static', filename='image/hand-thumbs-up.svg')}}" class="up-image" alt="upvote"> 
+            <img src="{{url_for('static', filename='image/hand-thumbs-up.svg')}}" alt="upvote"> 
           </button>
         </div>
         <div class="down-vote">
           <button type="submit" name="vote_type" value="downvote" class="js-downvote downvote">
-            <img src="{{url_for('static', filename='image/hand-thumbs-down.svg')}}" class="down-image" alt="downvote"> 
+            <img src="{{url_for('static', filename='image/hand-thumbs-down.svg')}}" alt="downvote"> 
           </button>
         </div>
       </div>

@@ -1,11 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Home Page - Question Feed{% endblock %}
+{% block title %}Question Feeds{% endblock %}
 
 {% block content %}
-<h3>All Questions</h3>
+ <h3>All Questions</h3>
+ <a href="{{url_for('questions_feed')}}">All </a> | <a href="{{url_for('create_ans_com')}}">Create Questions</a>
+ <hr>
+
+ <h2>Question Details</h2>
   {% for question in questions %}
    <div class="card">
-     <h3><a href="{{url_for('question_detail', question_id=question.id)}}">{{question.question_title}}</a></h3>
+     <h3>Question Title: <a href="{{url_for('question_detail',question_id=question.question_id)}}">{{ question.question_title }}</a></h3>
+     <p><strong>Subject Category: </strong>{{ question.subject_category }} | <strong>Question Details: </strong>{{ question.question_details }}</p>
     </div>
   {% endfor %}
 

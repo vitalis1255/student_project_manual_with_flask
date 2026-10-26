@@ -72,6 +72,10 @@ def create_user():
 
   #load users
   users = load_json(USERS_FILE)
+  questions = load_json(QUESTIONS_FILE)
+  for question in questions:
+    if question:
+      session["question_id"] = question["question_id"]
 
   if form_user.validate_on_submit() and 'create_user' in request.form:
     new_username = form_user.username.data.strip()
@@ -150,17 +154,11 @@ def create_ans_com():
   answers = load_json(ANSWERS_FILE)
   voters = load_json(VOTING_RECORDS_FILE)
 
-
-  
-  score = 0
-  upvotes = 0
-  downvotes = 0
-
   
   #Question Section
   if form_question.validate_on_submit() and 'question_submit' in request.form:
     questions.append({
-      "author's name":session["username"],
+      "author_name":session["username"],
       "question_id":len(questions) + 1,
       "user_id":session["user_id"],
       "question_title":form_question.question_title.data,
@@ -179,7 +177,7 @@ def create_ans_com():
   #Answer Section
   if form_answer.validate_on_submit() and 'answer_submit' in request.form:
     answers.append({
-      "author's name":session["username"],
+      "author_name":session["username"],
       "answer_id":len(answers) + 1,
       "user_id":session["user_id"],
       "question_id":session["question_id"],
@@ -196,7 +194,7 @@ def create_ans_com():
   #Comment Section
   if form_comment.validate_on_submit() and 'comment_submit' in request.form:
     comments.append({
-      "author's name":session["username"],
+      "author_name":session["username"],
       "question_id":session["question_id"],
       "answer_id":session["answer_id"],
       "user_id":session["user_id"],
@@ -209,7 +207,7 @@ def create_ans_com():
     for c in comments:
       if c:
         session["comment_id"] = c["comment_id"]
-    return redirect(url_for('create_ans_com'))
+    return redirect(url_for('questions_feed'))
 
   #Voting Section
   if request.method == "POST" and "vote_type" in request.form:
@@ -219,7 +217,7 @@ def create_ans_com():
     
     #answer_id = request.form.get("answer_id",type=int)
     vote_type = request.form.get("vote_type")
-
+    
     
     
     if vote_type not in ("upvote","downvote"):
@@ -228,55 +226,81 @@ def create_ans_com():
 
     for ans in answers:
       session["answer_id"] = ans["answer_id"]#check tommorrow
-    voters.append({
-      "author's name":session["username"],
+
+    new_vote = {
+      "author_name":session["username"],
       "answer_id":session["answer_id"],
       "voter_id":len(voters) + 1,
-      "vote_type":vote_type
-    })
+      "question_id":session["question_id"],
+      "vote_type":vote_type,
+      "user_id":session["user_id"],
+      "voted_at":datetime.now().strftime("%Y-%m-%d %H:%S:%M")
+    }
+    voters.append(new_vote)
     save_json(VOTING_RECORDS_FILE,voters)
     flash(f"{session["username"]} voted successfully")
+
+    upvotes_total = sum(1 for vote in voters if  vote["vote_type"] == "upvote")
+    downvotes_toal = sum(1 for vote in voters if  vote["vote_type"] == "downvote")
+
+    new_vote["upvotes"] = upvotes_total
+    new_vote["downvotes"] = downvotes_toal
+    new_vote["score"] = upvotes_total - downvotes_toal
+
     return redirect(url_for('create_ans_com'))
 
-  #Calculate upvotes and downvotes
-  vote_summary = {}
-  for answer in answers:
-    current_answer_id = answer["answer_id"]
-
-    upvotes = 0
-    downvotes = 0
-    for vote in voters:
-      if  vote["answer_id"] == current_answer_id:
-        if vote["vote_type"] == "upvote":
-          upvotes+=1
-        elif vote["vote_type"] == "downvote":
-          downvotes+=1
     
-    
-    vote_summary[current_answer_id] = {
-    "upvotes":upvotes,
-    "downvotes":downvotes,
-    "score":upvotes - downvotes
-    }
-    
-  return render_template('create_ans_com.html',form_question=form_question,form_comment=form_comment,form_answer=form_answer,questions=questions,comments=comments,answers=answers,voters=voters,vote_form=vote_form,vote_summary=vote_summary)
+  return render_template('create_ans_com.html',form_question=form_question,form_comment=form_comment,form_answer=form_answer,questions=questions,comments=comments,answers=answers,voters=voters,vote_form=vote_form)
   
-
-
-@app.route('/question/<int:question_id>')
-def question_detail(question_id):
-  """Handles individual questions with
-  answers,author,date of creation
-  """
-
-  return render_template('question_detail.html')
 
 
 @app.route('/questions_feed')
 def questions_feed():
   """Handles all question"""
+  questions = load_json(QUESTIONS_FILE)
+  for question in questions:
+    if question:
+      filtered_question = [c for c in questions if c["question_title"] == question["question_title"]]
+    else:
+      filtered_question = questions
 
-  return render_template('question_feed.html')
+  return render_template('question_feed.html',filtered_question=filtered_question,questions=questions)
+
+
+
+@app.route('/question_detail/<int:question_id>')
+def question_detail(question_id):
+  """Handles individual questions with
+  answers,author,date of creation
+  """
+  questions = load_json(QUESTIONS_FILE)
+  comments = load_json(COMMENTS_FILE)
+  answers = load_json(ANSWERS_FILE)
+  voters = load_json(VOTING_RECORDS_FILE)
+  users = load_json(USERS_FILE)
+
+  for idx in answers:
+    session["answer_id"] = idx["answer_id"]
+
+
+  question = next((q for q in questions if q.get("question_id") == question_id),None)
+  comment = next((c for c in comments if c.get("comment_id") == question_id),None)
+  ans = next((a for a in answers if a.get("answer_id") == question_id),None)
+  voter = next((v for v in voters if v.get("voter_id") == question["question_id"]),None)
+  user = next((u for u in users if u.get("user_id") == question["user_id"]),None)
+
+  if not question:
+    return "Information about question not found",401
+  elif not comment:
+    return "Information about comment not found",402
+  elif not ans:
+    return "Information about answer not found",403
+  elif not voter:
+    return "Information about voter not found",404
+
+    
+  return render_template('question_detail.html',question=question,comment=comment,ans=ans,voter=voter,user=user)
+
 
 
 

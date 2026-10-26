@@ -185,24 +185,34 @@ form textarea:focus {
   align-items: center;
 }
 
-#upvote {
+.upvote {
   cursor: pointer;
-  background-color: green;
+  background-color:white;
   border: none;
   width: 40px;
   height: 30px;
   padding-top: 5px;
   border-radius: 20px;
+  transition: 5s background-color;
 }
 
-#downvote {
+.upvote.active {
+  background-color: lightgreen;
+}
+
+.downvote {
   cursor: pointer;
-  background-color: red;
+  background-color: white;
   border: none;
   width: 40px;
   height: 30px;
   padding-top: 5px;
   border-radius: 20px;
+  transition: 5s background-color;
+}
+
+.downvote.active {
+  background-color: lightgreen;
 }
 
 .user-answer {
