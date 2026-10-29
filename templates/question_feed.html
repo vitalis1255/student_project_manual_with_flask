@@ -8,7 +8,7 @@
 
  <h2>Question Details</h2>
   {% for question in questions %}
-   <div class="card">
+   <div class="card-user">
      <h3>Question Title: <a href="{{url_for('question_detail',question_id=question.question_id)}}">{{ question.question_title }}</a></h3>
      <p><strong>Subject Category: </strong>{{ question.subject_category }} | <strong>Question Details: </strong>{{ question.question_details }}</p>
     </div>

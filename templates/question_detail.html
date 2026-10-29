@@ -2,31 +2,41 @@
 {% block title %}Question Details{% endblock %}
 
 {% block content %}
-<h2>User Details</h2>
-<div class="card">
+ <h2>User Details</h2>
+ <div class="card-details">
+  {% if user %}
   <p><strong>User Name: </strong>{{ user.username }}</p>
+  <p><strong>User Email: </strong>{{ user.email }}</p>
   <p><strong>User ID: </strong>{{ user.user_id }}</p>
-  <p><strong>Subject Category: </strong>{{ question.subject_category }}</p>
-
-  <p><strong>Upvote: </strong>{{ voter.get("upvotes") }}</p>
-  <p><strong>Downvote: </strong>{{ voter.get("downvotes") }}</p>
-  <h3><strong>Score: </strong>{{ voter.get("score") }}</h3>
-
-  {% if ans %}
-  <p><strong>Answer: </strong>{{ ans.form_answer }}</p>
   {% else %}
-  <p>No answer is available</p>
+  <p>No username is available</p>
   {% endif %}
+
+  {% if question %}
+  <p><strong>Subject Category: </strong>{{ question.subject_category }}</p>
+  <p><strong>Question Title: </strong>{{ question.question_title }}</p>
+  <p><strong>Question Details: </strong>{{ question.question_details }}</p>
+  <p><strong>Submitted At: </strong>{{ question.submitted_at }}</p>
+  {% else %}
+  <p>No question is available</p>
+  {% endif %}
+   
+  
+  <p><strong>Answer: </strong>{{ ans.form_answer }}</p>
+
+  
+  <p><strong>User Upvotes: </strong>{{ user_stats.get(question.user_id|string, {}).get('upvotes',0) }}</p>
+  <p><strong>User Downvotes: </strong>{{ user_stats.get(question.user_id|string, {}).get('downvotes',0) }}</p>
+  <p><strong>User Score: </strong>{{ user_stats.get(question.user_id|string, {}).get('score',0) }}</p>
+
+  <p><strong>Voted At: </strong>{{ voter.get("voted_at") }}</p>
 
   {% if comment %}
   <p><strong>Comment: </strong>{{ comment.comment }}</p>
   {% else %}
   <p>No comment is available</p>
   {% endif %}
-  <p><strong>Submitted At: </strong>{{ question.submitted_at }}</p>
-</div>
-<div>
   
-</div>
-<a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
+ </div>
+ <a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
 {% endblock %}

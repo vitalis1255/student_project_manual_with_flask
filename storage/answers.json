@@ -1,66 +1,50 @@
 [
     {
-        "author_name": "mercy",
+        "author_name": "oko",
         "answer_id": 1,
-        "user_id": 1,
+        "user_id": 3,
         "question_id": 1,
-        "form_answer": "Answer is 12",
-        "submitted_at": "2026-10-26:17:29:53"
-    },
-    {
-        "author_name": "mercy",
-        "answer_id": 2,
-        "user_id": 1,
-        "question_id": 2,
-        "form_answer": "It is NACH",
-        "submitted_at": "2026-10-26:17:32:08"
-    },
-    {
-        "author_name": "john",
-        "answer_id": 3,
-        "user_id": 2,
-        "question_id": 3,
-        "form_answer": "Telecommunication is the transmission and reception of information over a distance using electronic or electromagnetic systems.",
-        "submitted_at": "2026-10-26:18:09:35"
+        "form_answer": "9.0",
+        "submitted_at": "2026-10-28:17:42:52"
     },
     {
         "author_name": "oko",
-        "answer_id": 4,
+        "answer_id": 2,
         "user_id": 3,
-        "question_id": 4,
-        "form_answer": "Answer is 10m/s",
-        "submitted_at": "2026-10-26:19:41:33"
+        "question_id": 2,
+        "form_answer": "Ahiriokwu bu ole mole.",
+        "submitted_at": "2026-10-28:17:44:07"
+    },
+    {
+        "author_name": "mercy",
+        "answer_id": 3,
+        "user_id": 1,
+        "question_id": 3,
+        "form_answer": "80.0",
+        "submitted_at": "2026-10-28:17:46:14"
     },
     {
         "author_name": "john",
-        "answer_id": 5,
+        "answer_id": 4,
         "user_id": 2,
+        "question_id": 4,
+        "form_answer": "A wave is a disturbance that transfers energy from one point to another without the permanent transfer of matter.",
+        "submitted_at": "2026-10-28:18:00:30"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 5,
+        "user_id": 5,
         "question_id": 5,
-        "form_answer": "Ahiriokwu bu okwu olemole",
-        "submitted_at": "2026-10-26:20:13:08"
+        "form_answer": "50.0",
+        "submitted_at": "2026-10-29:17:01:45"
     },
     {
-        "author_name": "mercy",
+        "author_name": "izuchukwu",
         "answer_id": 6,
-        "user_id": 1,
+        "user_id": 5,
         "question_id": 6,
-        "form_answer": "Answer is 42",
-        "submitted_at": "2026-10-26:21:16:51"
-    },
-    {
-        "author_name": "mercy",
-        "answer_id": 7,
-        "user_id": 1,
-        "question_id": 7,
-        "form_answer": "Physics is the study of pysical properties",
-        "submitted_at": "2026-10-26:21:48:02"
-    },
-    {
-        "author_name": "mercy",
-        "answer_id": 8,
-        "user_id": 1,
-        "question_id": 8,
-        "form_answer": "computer",
-        "submitted_at": "2026-10-26:21:54:00"
+        "form_answer": "It has a boiling point of 40 degrees",
+        "submitted_at": "2026-10-29:17:05:05"
     }
 ]

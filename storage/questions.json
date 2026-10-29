@@ -1,74 +1,56 @@
 [
     {
-        "author_name": "mercy",
+        "author_name": "oko",
         "question_id": 1,
-        "user_id": 1,
+        "user_id": 3,
         "question_title": "square root",
-        "subject_category": "mathematics",
-        "question_details": "Find the square root of 144?",
-        "submitted_at": "2026-10-26:17:29:40"
-    },
-    {
-        "author_name": "mercy",
-        "question_id": 2,
-        "user_id": 1,
-        "question_title": "chemical formular",
-        "subject_category": "chemistry",
-        "question_details": "what is the chemical formular of sodium chloride?",
-        "submitted_at": "2026-10-26:17:31:34"
-    },
-    {
-        "author_name": "john",
-        "question_id": 3,
-        "user_id": 2,
-        "question_title": "Telecommunication",
-        "subject_category": "digital technology",
-        "question_details": "Explain in details, Telecommunication?",
-        "submitted_at": "2026-10-26:18:08:25"
+        "subject_category": "Mathematics",
+        "question_details": "Find the square root of 81?",
+        "submitted_at": "2026-10-28:17:42:43"
     },
     {
         "author_name": "oko",
-        "question_id": 4,
+        "question_id": 2,
         "user_id": 3,
-        "question_title": "Equation of motion",
-        "subject_category": "physics",
-        "question_details": "if u is 4m/s, s = 20m, using g=10m/s2, Find V in m/s?",
-        "submitted_at": "2026-10-26:19:41:15"
+        "question_title": "Ahiriokwu",
+        "subject_category": "Igbo",
+        "question_details": "Gini bu ahiriokwu?",
+        "submitted_at": "2026-10-28:17:43:50"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 3,
+        "user_id": 1,
+        "question_title": "Arithmetic",
+        "subject_category": "Mathematics",
+        "question_details": "add 30 and 50.",
+        "submitted_at": "2026-10-28:17:46:05"
     },
     {
         "author_name": "john",
-        "question_id": 5,
+        "question_id": 4,
         "user_id": 2,
-        "question_title": "Ahiriokwu",
-        "subject_category": "igbo",
-        "question_details": "Gini bu ahiriokwu?",
-        "submitted_at": "2026-10-26:20:12:44"
-    },
-    {
-        "author_name": "mercy",
-        "question_id": 6,
-        "user_id": 1,
-        "question_title": "addition",
-        "subject_category": "Mathematics",
-        "question_details": "add 2 and 40",
-        "submitted_at": "2026-10-26:21:16:33"
-    },
-    {
-        "author_name": "mercy",
-        "question_id": 7,
-        "user_id": 1,
-        "question_title": "definition of physics",
+        "question_title": "wave",
         "subject_category": "Physics",
-        "question_details": "what is physics?",
-        "submitted_at": "2026-10-26:21:47:34"
+        "question_details": "what is a wave?",
+        "submitted_at": "2026-10-28:18:00:18"
     },
     {
-        "author_name": "mercy",
-        "question_id": 8,
-        "user_id": 1,
-        "question_title": "computer",
-        "subject_category": "Digital Technology",
-        "question_details": "define computer",
-        "submitted_at": "2026-10-26:21:53:46"
+        "author_name": "izuchukwu",
+        "question_id": 5,
+        "user_id": 5,
+        "question_title": "word problem",
+        "subject_category": "Mathematics",
+        "question_details": "If x = 20, given that y = 30. Find d which is y + x",
+        "submitted_at": "2026-10-29:17:01:32"
+    },
+    {
+        "author_name": "izuchukwu",
+        "question_id": 6,
+        "user_id": 5,
+        "question_title": "physical property",
+        "subject_category": "Chemistry",
+        "question_details": "what is the physical property of sodium chloride",
+        "submitted_at": "2026-10-29:17:04:42"
     }
 ]

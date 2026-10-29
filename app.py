@@ -225,8 +225,11 @@ def create_ans_com():
       return redirect(url_for('create_ans_com')) 
 
     for ans in answers:
-      session["answer_id"] = ans["answer_id"]#check tommorrow
+      session["answer_id"] = ans["answer_id"]
 
+
+    
+    #create new dictionary
     new_vote = {
       "author_name":session["username"],
       "answer_id":session["answer_id"],
@@ -239,13 +242,6 @@ def create_ans_com():
     voters.append(new_vote)
     save_json(VOTING_RECORDS_FILE,voters)
     flash(f"{session["username"]} voted successfully")
-
-    upvotes_total = sum(1 for vote in voters if  vote["vote_type"] == "upvote")
-    downvotes_toal = sum(1 for vote in voters if  vote["vote_type"] == "downvote")
-
-    new_vote["upvotes"] = upvotes_total
-    new_vote["downvotes"] = downvotes_toal
-    new_vote["score"] = upvotes_total - downvotes_toal
 
     return redirect(url_for('create_ans_com'))
 
@@ -267,7 +263,6 @@ def questions_feed():
   return render_template('question_feed.html',filtered_question=filtered_question,questions=questions)
 
 
-
 @app.route('/question_detail/<int:question_id>')
 def question_detail(question_id):
   """Handles individual questions with
@@ -279,15 +274,64 @@ def question_detail(question_id):
   voters = load_json(VOTING_RECORDS_FILE)
   users = load_json(USERS_FILE)
 
-  for idx in answers:
-    session["answer_id"] = idx["answer_id"]
+  #calculate each user's total upvotes,downvotes, and score
+  user_stats = {}
+  for user in users:
+    user_id = str(user.get("user_id"))
+
+    user_stats[user_id] = {
+      "upvotes":0,
+      "downvotes":0,
+      "score":0
+    }
+
+  #count votes received on answers
+  for answer in answers:
+    answer_id = int(answer.get("answer_id", -1))
+
+    #find the author of this answer
+    author_id = str(answer.get("user_id"))
+
+    if author_id not in user_stats:
+      user_stats[author_id] = {
+          "upvotes":0,
+          "downvotes":0,
+          "score":0
+        }
+
+    #count votes beloging to this answer
+    for vote in voters:
+      if int(vote.get("answer_id", -1)) == answer_id:
+        if vote.get("vote_type") == "upvote":
+          user_stats[author_id]["upvotes"] += 1
+
+        elif vote.get("vote_type") == "downvote":
+          user_stats[author_id]["downvotes"] += 1
+
+  #calculate each user's score
+  for user_id, stats in user_stats.items():
+    stats["score"] = stats["upvotes"] - stats["downvotes"]
+
+  #for idx in answers:
+    #answer_id = int(idx["answer_id"])
 
 
   question = next((q for q in questions if q.get("question_id") == question_id),None)
   comment = next((c for c in comments if c.get("comment_id") == question_id),None)
-  ans = next((a for a in answers if a.get("answer_id") == question_id),None)
-  voter = next((v for v in voters if v.get("voter_id") == question["question_id"]),None)
+  ans = next((a for a in answers if a["answer_id"] == question_id),None)
+  voter = next((v for v in voters if v.get("answer_id") == ans["answer_id"]),None)
   user = next((u for u in users if u.get("user_id") == question["user_id"]),None)
+
+  
+  #Calculate upvote, downvote and score separately in relation to each answer
+  for answer in answers:
+    answer_id = int(answer["answer_id"])
+  upvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "upvote")
+  downvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "downvote")
+  answer["upvotes"] = upvotes
+  answer["downvotes"] = downvotes
+  answer["score"] = upvotes - downvotes
+
 
   if not question:
     return "Information about question not found",401
@@ -295,11 +339,11 @@ def question_detail(question_id):
     return "Information about comment not found",402
   elif not ans:
     return "Information about answer not found",403
-  elif not voter:
-    return "Information about voter not found",404
 
+  elif not voter:
+      return "Information about answer not found",404
     
-  return render_template('question_detail.html',question=question,comment=comment,ans=ans,voter=voter,user=user)
+  return render_template('question_detail.html',question=question,comment=comment,ans=ans,user=user,voter=voter,user_stats=user_stats)
 
 
 

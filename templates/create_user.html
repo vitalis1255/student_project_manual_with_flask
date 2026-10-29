@@ -2,7 +2,14 @@
 {% block title %}Nexus User Account Creation{% endblock %}
 
 {% block content %}
- <h2>Nexus User Account Creation Portal</h2>
+ <div class="card">
+    <div class="h2-format">
+      <h2>Nexus User Account Creation Portal</h2>
+    </div>
+    <div class="user-format">
+      <strong class="account">Have an Account?</strong> <a href="{{url_for('login')}}"class="login-btn">Login</a>
+    </div>
+  </div>
  <div class="user">
    <h3>Create User Account</h3>
    <form method="POST">
@@ -33,7 +40,4 @@
      </div>
     </form>
  </div>
- <div class="card">
-    <strong class="account">Have an Account?</strong> <a href="{{url_for('login')}}" class="login-btn">Login</a>
-  </div>
 {% endblock %}

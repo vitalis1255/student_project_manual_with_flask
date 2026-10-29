@@ -1,74 +1,65 @@
 [
     {
-        "author_name": "mercy",
+        "author_name": "oko",
         "question_id": 1,
         "answer_id": 1,
-        "user_id": 1,
+        "user_id": 3,
         "comment_id": 1,
         "comment": "Nice answer",
-        "submitted_at": "2026-10-26:17:30:06"
-    },
-    {
-        "author_name": "mercy",
-        "question_id": 2,
-        "answer_id": 2,
-        "user_id": 1,
-        "comment_id": 2,
-        "comment": "very good answer. Well done",
-        "submitted_at": "2026-10-26:17:32:25"
-    },
-    {
-        "author_name": "john",
-        "question_id": 3,
-        "answer_id": 3,
-        "user_id": 2,
-        "comment_id": 3,
-        "comment": "very good answer. Well done",
-        "submitted_at": "2026-10-26:18:09:59"
+        "submitted_at": "2026-10-28:17:43:10"
     },
     {
         "author_name": "oko",
-        "question_id": 4,
-        "answer_id": 4,
+        "question_id": 2,
+        "answer_id": 2,
         "user_id": 3,
-        "comment_id": 4,
-        "comment": "Good",
-        "submitted_at": "2026-10-26:19:41:53"
+        "comment_id": 2,
+        "comment": "not nice",
+        "submitted_at": "2026-10-28:17:44:29"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 3,
+        "answer_id": 3,
+        "user_id": 1,
+        "comment_id": 3,
+        "comment": "very good answer. Well done",
+        "submitted_at": "2026-10-28:17:46:29"
     },
     {
         "author_name": "john",
+        "question_id": 4,
+        "answer_id": 4,
+        "user_id": 2,
+        "comment_id": 4,
+        "comment": "Not really correct.",
+        "submitted_at": "2026-10-28:18:00:59"
+    },
+    {
+        "author_name": "izuchukwu",
         "question_id": 5,
         "answer_id": 5,
-        "user_id": 2,
+        "user_id": 5,
         "comment_id": 5,
-        "comment": "You gave a wonderful answer ",
-        "submitted_at": "2026-10-26:20:13:42"
+        "comment": "Nice answer",
+        "submitted_at": "2026-10-29:17:01:56"
     },
     {
-        "author_name": "mercy",
+        "author_name": "izuchukwu",
         "question_id": 6,
         "answer_id": 6,
-        "user_id": 1,
+        "user_id": 5,
         "comment_id": 6,
-        "comment": "Good",
-        "submitted_at": "2026-10-26:21:17:09"
+        "comment": "very good answer. Well done",
+        "submitted_at": "2026-10-29:17:05:23"
     },
     {
-        "author_name": "mercy",
-        "question_id": 7,
-        "answer_id": 7,
-        "user_id": 1,
+        "author_name": "izuchukwu",
+        "question_id": 6,
+        "answer_id": 6,
+        "user_id": 5,
         "comment_id": 7,
-        "comment": "well done",
-        "submitted_at": "2026-10-26:21:48:21"
-    },
-    {
-        "author_name": "mercy",
-        "question_id": 8,
-        "answer_id": 8,
-        "user_id": 1,
-        "comment_id": 8,
-        "comment": "Nice answer",
-        "submitted_at": "2026-10-26:21:55:11"
+        "comment": "Nice one",
+        "submitted_at": "2026-10-29:17:11:04"
     }
 ]

@@ -19,5 +19,19 @@
         "password": "oko",
         "confirm_password": "oko",
         "email": "oko@gmail.com"
+    },
+    {
+        "user_id": 4,
+        "username": "emeka",
+        "password": "emeka",
+        "confirm_password": "emeka",
+        "email": "emeka@gmail.com"
+    },
+    {
+        "user_id": 5,
+        "username": "izuchukwu",
+        "password": "izuchukwu",
+        "confirm_password": "izuchukwu",
+        "email": "izuchukwu@gmail.com"
     }
 ]

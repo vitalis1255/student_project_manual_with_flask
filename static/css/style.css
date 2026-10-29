@@ -222,3 +222,16 @@ form textarea:focus {
 button {
   cursor: pointer;
 }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}

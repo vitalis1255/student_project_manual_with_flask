@@ -2,8 +2,15 @@
 {% block title %}User Login{% endblock %}
 
 {% block content %}
+<div class="card">
+  <div class="h3-user">
+    <h3>User Login Page</h3>
+  </div>
+  <div class="login-user">
+    <strong class="account">If No Account?</strong> <a href="{{url_for('create_user')}}" class="login-btn">Create Account</a>
+  </div>
+</div>
 <div class="user" login-card>
-  <h3>User Login Page</h3>
   <form method="POST">
     {{ form.hidden_tag() }}
 
@@ -20,7 +27,4 @@
     </div>
   </form>
 </div>
-<div class="card">
-  <strong class="account">If No Account?</strong> <a href="{{url_for('create_user')}}" class="login-btn">Create Account</a>
-  </div>
 {% endblock %}
