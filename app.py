@@ -279,6 +279,7 @@ def question_detail(question_id):
   for user in users:
     user_id = str(user.get("user_id"))
 
+    #Initialization of each user's id
     user_stats[user_id] = {
       "upvotes":0,
       "downvotes":0,
@@ -287,7 +288,7 @@ def question_detail(question_id):
 
   #count votes received on answers
   for answer in answers:
-    answer_id = int(answer.get("answer_id", -1))
+    answer_id = int(answer.get("answer_id", -1))#return -1 if the key does not exixt.
 
     #find the author of this answer
     author_id = str(answer.get("user_id"))
