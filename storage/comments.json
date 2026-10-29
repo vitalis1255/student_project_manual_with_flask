@@ -1,65 +1,56 @@
 [
     {
-        "author_name": "oko",
+        "author_name": "mercy",
         "question_id": 1,
         "answer_id": 1,
-        "user_id": 3,
+        "user_id": 1,
         "comment_id": 1,
         "comment": "Nice answer",
-        "submitted_at": "2026-10-28:17:43:10"
+        "submitted_at": "2026-10-29:17:31:38"
     },
     {
-        "author_name": "oko",
+        "author_name": "izuchukwu",
         "question_id": 2,
         "answer_id": 2,
-        "user_id": 3,
+        "user_id": 5,
         "comment_id": 2,
-        "comment": "not nice",
-        "submitted_at": "2026-10-28:17:44:29"
+        "comment": "Not really good",
+        "submitted_at": "2026-10-29:17:33:24"
     },
     {
-        "author_name": "mercy",
+        "author_name": "izuchukwu",
+        "question_id": 3,
+        "answer_id": 2,
+        "user_id": 5,
+        "comment_id": 3,
+        "comment": "Nice answer",
+        "submitted_at": "2026-10-29:17:38:25"
+    },
+    {
+        "author_name": "izuchukwu",
         "question_id": 3,
         "answer_id": 3,
-        "user_id": 1,
-        "comment_id": 3,
-        "comment": "very good answer. Well done",
-        "submitted_at": "2026-10-28:17:46:29"
+        "user_id": 5,
+        "comment_id": 4,
+        "comment": "Good",
+        "submitted_at": "2026-10-29:18:04:46"
     },
     {
         "author_name": "john",
         "question_id": 4,
         "answer_id": 4,
         "user_id": 2,
-        "comment_id": 4,
-        "comment": "Not really correct.",
-        "submitted_at": "2026-10-28:18:00:59"
-    },
-    {
-        "author_name": "izuchukwu",
-        "question_id": 5,
-        "answer_id": 5,
-        "user_id": 5,
         "comment_id": 5,
         "comment": "Nice answer",
-        "submitted_at": "2026-10-29:17:01:56"
+        "submitted_at": "2026-10-29:18:06:49"
     },
     {
-        "author_name": "izuchukwu",
-        "question_id": 6,
-        "answer_id": 6,
-        "user_id": 5,
+        "author_name": "john",
+        "question_id": 5,
+        "answer_id": 5,
+        "user_id": 2,
         "comment_id": 6,
-        "comment": "very good answer. Well done",
-        "submitted_at": "2026-10-29:17:05:23"
-    },
-    {
-        "author_name": "izuchukwu",
-        "question_id": 6,
-        "answer_id": 6,
-        "user_id": 5,
-        "comment_id": 7,
-        "comment": "Nice one",
-        "submitted_at": "2026-10-29:17:11:04"
+        "comment": "Not really good",
+        "submitted_at": "2026-10-29:18:08:48"
     }
 ]

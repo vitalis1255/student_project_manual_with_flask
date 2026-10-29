@@ -1,65 +1,65 @@
 [
     {
-        "author_name": "oko",
+        "author_name": "mercy",
         "answer_id": 1,
         "voter_id": 1,
         "question_id": 1,
         "vote_type": "upvote",
-        "user_id": 3,
-        "voted_at": "2026-10-28 17:59:42"
+        "user_id": 1,
+        "voted_at": "2026-10-29 17:30:31"
     },
     {
-        "author_name": "oko",
+        "author_name": "izuchukwu",
         "answer_id": 2,
         "voter_id": 2,
         "question_id": 2,
-        "vote_type": "upvote",
-        "user_id": 3,
-        "voted_at": "2026-10-28 17:14:44"
+        "vote_type": "downvote",
+        "user_id": 5,
+        "voted_at": "2026-10-29 17:15:33"
     },
     {
-        "author_name": "mercy",
-        "answer_id": 3,
+        "author_name": "izuchukwu",
+        "answer_id": 2,
         "voter_id": 3,
         "question_id": 3,
         "vote_type": "upvote",
-        "user_id": 1,
-        "voted_at": "2026-10-28 17:19:46"
+        "user_id": 5,
+        "voted_at": "2026-10-29 17:08:38"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 2,
+        "voter_id": 4,
+        "question_id": 3,
+        "vote_type": "upvote",
+        "user_id": 5,
+        "voted_at": "2026-10-29 17:16:38"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 3,
+        "voter_id": 5,
+        "question_id": 3,
+        "vote_type": "upvote",
+        "user_id": 5,
+        "voted_at": "2026-10-29 18:38:04"
     },
     {
         "author_name": "john",
         "answer_id": 4,
-        "voter_id": 4,
+        "voter_id": 6,
         "question_id": 4,
+        "vote_type": "upvote",
+        "user_id": 2,
+        "voted_at": "2026-10-29 18:40:06"
+    },
+    {
+        "author_name": "john",
+        "answer_id": 5,
+        "voter_id": 7,
+        "question_id": 5,
         "vote_type": "downvote",
         "user_id": 2,
-        "voted_at": "2026-10-28 18:36:00"
-    },
-    {
-        "author_name": "izuchukwu",
-        "answer_id": 5,
-        "voter_id": 5,
-        "question_id": 5,
-        "vote_type": "upvote",
-        "user_id": 5,
-        "voted_at": "2026-10-29 17:49:01"
-    },
-    {
-        "author_name": "izuchukwu",
-        "answer_id": 6,
-        "voter_id": 6,
-        "question_id": 6,
-        "vote_type": "upvote",
-        "user_id": 5,
-        "voted_at": "2026-10-29 17:15:05"
-    },
-    {
-        "author_name": "izuchukwu",
-        "answer_id": 6,
-        "voter_id": 7,
-        "question_id": 6,
-        "vote_type": "downvote",
-        "user_id": 5,
-        "voted_at": "2026-10-29 17:55:10"
+        "voted_at": "2026-10-29 18:40:08"
     }
 ]

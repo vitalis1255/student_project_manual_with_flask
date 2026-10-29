@@ -1,50 +1,42 @@
 [
     {
-        "author_name": "oko",
+        "author_name": "mercy",
         "answer_id": 1,
-        "user_id": 3,
+        "user_id": 1,
         "question_id": 1,
         "form_answer": "9.0",
-        "submitted_at": "2026-10-28:17:42:52"
+        "submitted_at": "2026-10-29:17:31:25"
     },
     {
-        "author_name": "oko",
+        "author_name": "izuchukwu",
         "answer_id": 2,
-        "user_id": 3,
+        "user_id": 5,
         "question_id": 2,
-        "form_answer": "Ahiriokwu bu ole mole.",
-        "submitted_at": "2026-10-28:17:44:07"
+        "form_answer": "It is the movement of particles.",
+        "submitted_at": "2026-10-29:17:33:10"
     },
     {
-        "author_name": "mercy",
+        "author_name": "izuchukwu",
         "answer_id": 3,
-        "user_id": 1,
+        "user_id": 5,
         "question_id": 3,
-        "form_answer": "80.0",
-        "submitted_at": "2026-10-28:17:46:14"
+        "form_answer": "7.0",
+        "submitted_at": "2026-10-29:18:04:33"
     },
     {
         "author_name": "john",
         "answer_id": 4,
         "user_id": 2,
         "question_id": 4,
-        "form_answer": "A wave is a disturbance that transfers energy from one point to another without the permanent transfer of matter.",
-        "submitted_at": "2026-10-28:18:00:30"
+        "form_answer": "120.0",
+        "submitted_at": "2026-10-29:18:06:32"
     },
     {
-        "author_name": "izuchukwu",
+        "author_name": "john",
         "answer_id": 5,
-        "user_id": 5,
+        "user_id": 2,
         "question_id": 5,
-        "form_answer": "50.0",
-        "submitted_at": "2026-10-29:17:01:45"
-    },
-    {
-        "author_name": "izuchukwu",
-        "answer_id": 6,
-        "user_id": 5,
-        "question_id": 6,
-        "form_answer": "It has a boiling point of 40 degrees",
-        "submitted_at": "2026-10-29:17:05:05"
+        "form_answer": "10.9m",
+        "submitted_at": "2026-10-29:18:08:36"
     }
 ]

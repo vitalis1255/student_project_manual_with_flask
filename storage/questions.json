@@ -1,56 +1,47 @@
 [
     {
-        "author_name": "oko",
+        "author_name": "mercy",
         "question_id": 1,
-        "user_id": 3,
+        "user_id": 1,
         "question_title": "square root",
         "subject_category": "Mathematics",
-        "question_details": "Find the square root of 81?",
-        "submitted_at": "2026-10-28:17:42:43"
+        "question_details": "Find the square root of 81.",
+        "submitted_at": "2026-10-29:17:31:15"
     },
     {
-        "author_name": "oko",
+        "author_name": "izuchukwu",
         "question_id": 2,
-        "user_id": 3,
-        "question_title": "Ahiriokwu",
-        "subject_category": "Igbo",
-        "question_details": "Gini bu ahiriokwu?",
-        "submitted_at": "2026-10-28:17:43:50"
+        "user_id": 5,
+        "question_title": "motion",
+        "subject_category": "Physics",
+        "question_details": "Define motion?",
+        "submitted_at": "2026-10-29:17:32:52"
     },
     {
-        "author_name": "mercy",
+        "author_name": "izuchukwu",
         "question_id": 3,
-        "user_id": 1,
+        "user_id": 5,
         "question_title": "Arithmetic",
         "subject_category": "Mathematics",
-        "question_details": "add 30 and 50.",
-        "submitted_at": "2026-10-28:17:46:05"
+        "question_details": "Add 3 and 4",
+        "submitted_at": "2026-10-29:18:04:24"
     },
     {
         "author_name": "john",
         "question_id": 4,
         "user_id": 2,
-        "question_title": "wave",
-        "subject_category": "Physics",
-        "question_details": "what is a wave?",
-        "submitted_at": "2026-10-28:18:00:18"
-    },
-    {
-        "author_name": "izuchukwu",
-        "question_id": 5,
-        "user_id": 5,
-        "question_title": "word problem",
+        "question_title": "factorial",
         "subject_category": "Mathematics",
-        "question_details": "If x = 20, given that y = 30. Find d which is y + x",
-        "submitted_at": "2026-10-29:17:01:32"
+        "question_details": "Find the factorial of 5.",
+        "submitted_at": "2026-10-29:18:06:23"
     },
     {
-        "author_name": "izuchukwu",
-        "question_id": 6,
-        "user_id": 5,
-        "question_title": "physical property",
-        "subject_category": "Chemistry",
-        "question_details": "what is the physical property of sodium chloride",
-        "submitted_at": "2026-10-29:17:04:42"
+        "author_name": "john",
+        "question_id": 5,
+        "user_id": 2,
+        "question_title": "equation of motion",
+        "subject_category": "Physics",
+        "question_details": "if u = 0, v = 10m/s, g = 10m/s^2. Find s?",
+        "submitted_at": "2026-10-29:18:08:24"
     }
 ]
