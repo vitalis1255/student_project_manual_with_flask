@@ -312,9 +312,6 @@ def question_detail(question_id):
   for user_id, stats in user_stats.items():
     stats["score"] = stats["upvotes"] - stats["downvotes"]
 
-  #for idx in answers:
-    #answer_id = int(idx["answer_id"])
-
 
   question = next((q for q in questions if q.get("question_id") == question_id),None)
   comment = next((c for c in comments if c.get("comment_id") == question_id),None)
