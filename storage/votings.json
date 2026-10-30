@@ -61,5 +61,23 @@
         "vote_type": "downvote",
         "user_id": 2,
         "voted_at": "2026-10-29 18:40:08"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 6,
+        "voter_id": 8,
+        "question_id": 6,
+        "vote_type": "upvote",
+        "user_id": 5,
+        "voted_at": "2026-10-30 10:31:50"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 7,
+        "voter_id": 9,
+        "question_id": 7,
+        "vote_type": "downvote",
+        "user_id": 5,
+        "voted_at": "2026-10-30 10:30:54"
     }
 ]

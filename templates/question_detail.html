@@ -31,8 +31,8 @@
 
   <p><strong>Voted At: </strong>{{ voter.get("voted_at") }}</p>
 
-  {% if comment %}
-  <p><strong>Comment: </strong>{{ comment.comment }}</p>
+  {% if comment_user %}
+  <p><strong>Comment: </strong>{{ comment_user.comment }}</p>
   {% else %}
   <p>No comment is available</p>
   {% endif %}

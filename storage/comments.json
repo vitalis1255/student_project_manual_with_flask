@@ -52,5 +52,23 @@
         "comment_id": 6,
         "comment": "Not really good",
         "submitted_at": "2026-10-29:18:08:48"
+    },
+    {
+        "author_name": "izuchukwu",
+        "question_id": 6,
+        "answer_id": 6,
+        "user_id": 5,
+        "comment_id": 7,
+        "comment": "very good answer. Well done",
+        "submitted_at": "2026-10-30:10:50:40"
+    },
+    {
+        "author_name": "izuchukwu",
+        "question_id": 7,
+        "answer_id": 7,
+        "user_id": 5,
+        "comment_id": 8,
+        "comment": "Good but it remains.",
+        "submitted_at": "2026-10-30:10:54:57"
     }
 ]

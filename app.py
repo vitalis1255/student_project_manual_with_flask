@@ -274,8 +274,11 @@ def question_detail(question_id):
   voters = load_json(VOTING_RECORDS_FILE)
   users = load_json(USERS_FILE)
 
+
   #calculate each user's total upvotes,downvotes, and score
   user_stats = {}
+
+  #get the user id
   for user in users:
     user_id = str(user.get("user_id"))
 
@@ -315,25 +318,25 @@ def question_detail(question_id):
 
 
   question = next((q for q in questions if q.get("question_id") == question_id),None)
-  comment = next((c for c in comments if c.get("comment_id") == question_id),None)
+  comment_user = next((c for c in comments if c.get("answer_id") == question_id),None)
   ans = next((a for a in answers if a["answer_id"] == question_id),None)
   voter = next((v for v in voters if v.get("answer_id") == ans["answer_id"]),None)
   user = next((u for u in users if u.get("user_id") == question["user_id"]),None)
 
   
   #Calculate upvote, downvote and score separately in relation to each answer
-  for answer in answers:
-    answer_id = int(answer["answer_id"])
-  upvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "upvote")
-  downvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "downvote")
-  answer["upvotes"] = upvotes
-  answer["downvotes"] = downvotes
-  answer["score"] = upvotes - downvotes
+  #for answer in answers:
+    #answer_id = int(answer["answer_id"])
+  #upvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "upvote")
+  #downvotes = sum(1 for vote in voters if int(vote.get("answer_id", -1)) == answer_id and  vote.get("vote_type") == "downvote")
+  #answer["upvotes"] = upvotes
+  #answer["downvotes"] = downvotes
+  #answer["score"] = upvotes - downvotes
 
 
   if not question:
     return "Information about question not found",401
-  elif not comment:
+  elif not comment_user:
     return "Information about comment not found",402
   elif not ans:
     return "Information about answer not found",403
@@ -341,7 +344,7 @@ def question_detail(question_id):
   elif not voter:
       return "Information about answer not found",404
     
-  return render_template('question_detail.html',question=question,comment=comment,ans=ans,user=user,voter=voter,user_stats=user_stats)
+  return render_template('question_detail.html',question=question,comment_user=comment_user,ans=ans,user=user,voter=voter,user_stats=user_stats)
 
 
 

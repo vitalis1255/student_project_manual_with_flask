@@ -43,5 +43,23 @@
         "subject_category": "Physics",
         "question_details": "if u = 0, v = 10m/s, g = 10m/s^2. Find s?",
         "submitted_at": "2026-10-29:18:08:24"
+    },
+    {
+        "author_name": "izuchukwu",
+        "question_id": 6,
+        "user_id": 5,
+        "question_title": "Obodo",
+        "subject_category": "Igbo",
+        "question_details": "Kowa obodo gi",
+        "submitted_at": "2026-10-30:10:50:05"
+    },
+    {
+        "author_name": "izuchukwu",
+        "question_id": 7,
+        "user_id": 5,
+        "question_title": "Simple Interest",
+        "subject_category": "Mathematics",
+        "question_details": "Find the simple interest of 100% of 1yr.",
+        "submitted_at": "2026-10-30:10:54:09"
     }
 ]

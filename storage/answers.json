@@ -38,5 +38,21 @@
         "question_id": 5,
         "form_answer": "10.9m",
         "submitted_at": "2026-10-29:18:08:36"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 6,
+        "user_id": 5,
+        "question_id": 6,
+        "form_answer": "Obodo bu ezigbo obodo",
+        "submitted_at": "2026-10-30:10:50:25"
+    },
+    {
+        "author_name": "izuchukwu",
+        "answer_id": 7,
+        "user_id": 5,
+        "question_id": 7,
+        "form_answer": "10.10",
+        "submitted_at": "2026-10-30:10:54:24"
     }
 ]
