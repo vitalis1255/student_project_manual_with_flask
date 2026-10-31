@@ -61,5 +61,32 @@
         "subject_category": "Mathematics",
         "question_details": "Find the simple interest of 100% of 1yr.",
         "submitted_at": "2026-10-30:10:54:09"
+    },
+    {
+        "author_name": "john",
+        "question_id": 8,
+        "user_id": 2,
+        "question_title": "indices",
+        "subject_category": "Mathematics",
+        "question_details": "Find the indices of a^0.",
+        "submitted_at": "2026-10-30:11:22:30"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 9,
+        "user_id": 1,
+        "question_title": "square root",
+        "subject_category": "Mathematics",
+        "question_details": "Find the square root of 16?",
+        "submitted_at": "2026-10-31:13:59:54"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 10,
+        "user_id": 1,
+        "question_title": "square root",
+        "subject_category": "Mathematics",
+        "question_details": "Find the square root of 81.",
+        "submitted_at": "2026-10-31:14:09:11"
     }
 ]

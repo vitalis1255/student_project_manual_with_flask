@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Displays All Questions{% endblock %}
+
+{% block content %}
+<div class="question-count">
+  <div class="count-answer">
+    <h3 style="color: green;">Answer Count</h3>
+  </div>
+  <div class="question-feed-one">
+    <a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
+  </div>
+</div>
+<div class="card-answer-count" id="question-app">
+  {% for question in questions %}
+  <h3 id="question-details">{{ question.question_details }}</h3>
+  <h3 id="subject-category">[{{ question.subject_category }}]</h3>
+  <h3 id="question-title">{{ question.question_title }}</h3>
+  <h3 id="author-info">Asked by {{ question.author_name }}</h3>
+  <h3 id="creation-date">On {{ question.submitted_at }}</h3>
+  <h3 id="answer-count"> {{ question.answer_count }} Answers</h3>
+  <hr style="background-color: white;">
+  {% endfor %}
+</div>
+<script src="{{url_for('static', filename='js/question.js')}}"></script>
+{% endblock %}

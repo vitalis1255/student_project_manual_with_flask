@@ -70,5 +70,32 @@
         "comment_id": 8,
         "comment": "Good but it remains.",
         "submitted_at": "2026-10-30:10:54:57"
+    },
+    {
+        "author_name": "john",
+        "question_id": 8,
+        "answer_id": 8,
+        "user_id": 2,
+        "comment_id": 9,
+        "comment": "Good answer.",
+        "submitted_at": "2026-10-30:11:23:02"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 9,
+        "answer_id": 9,
+        "user_id": 1,
+        "comment_id": 10,
+        "comment": "Nice answer",
+        "submitted_at": "2026-10-31:14:00:23"
+    },
+    {
+        "author_name": "mercy",
+        "question_id": 10,
+        "answer_id": 10,
+        "user_id": 1,
+        "comment_id": 11,
+        "comment": "very good answer. Well done",
+        "submitted_at": "2026-10-31:14:09:41"
     }
 ]

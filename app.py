@@ -276,9 +276,9 @@ def question_detail(question_id):
 
 
   #calculate each user's total upvotes,downvotes, and score
-  user_stats = {}
+  user_stats = {} #create empty dictionary.
 
-  #get the user id
+  #get the user id of each user.
   for user in users:
     user_id = str(user.get("user_id"))
 
@@ -348,6 +348,23 @@ def question_detail(question_id):
 
 
 
+@app.route('/question/fetch')
+def question_fetch():
+  """Handles Fetching Questions and answers calculation"""
+
+  count = 0
+
+  answers = load_json(ANSWERS_FILE)
+  questions = load_json(QUESTIONS_FILE)
+
+  for question in questions:
+    count = sum(
+      1 for answer in answers if answer["question_id"] == question["question_id"]
+    )
+    question["answer_count"] = count #{"answer_count":2}
+
+  return render_template('question.html',questions=questions)
+  
 
 if __name__ == '__main__':
   app.run(debug=True)

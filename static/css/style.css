@@ -235,3 +235,25 @@ footer {
   color: #64748b;
   font-size: 0.9rem;
 }
+
+.cont-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.feed-question a {
+  text-decoration: none;
+  color: green;
+}
+
+.question-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question-feed-one a {
+  color: #ef4444;
+  text-decoration: none;
+}

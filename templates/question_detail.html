@@ -2,8 +2,15 @@
 {% block title %}Question Details{% endblock %}
 
 {% block content %}
- <h2>User Details</h2>
- <div class="card-details">
+<div class="cont-div">
+  <div class="user-details">
+    <h2>User Details</h2>
+  </div>
+  <div class="feed-question">
+    <a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
+  </div>
+</div>
+<div class="card-details">
   {% if user %}
   <p><strong>User Name: </strong>{{ user.username }}</p>
   <p><strong>User Email: </strong>{{ user.email }}</p>
@@ -38,5 +45,4 @@
   {% endif %}
   
  </div>
- <a href="{{ url_for('questions_feed') }}">&larr; Back to Question Feed</a>
 {% endblock %}

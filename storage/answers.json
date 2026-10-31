@@ -54,5 +54,29 @@
         "question_id": 7,
         "form_answer": "10.10",
         "submitted_at": "2026-10-30:10:54:24"
+    },
+    {
+        "author_name": "john",
+        "answer_id": 8,
+        "user_id": 2,
+        "question_id": 8,
+        "form_answer": "1.00",
+        "submitted_at": "2026-10-30:11:22:39"
+    },
+    {
+        "author_name": "mercy",
+        "answer_id": 9,
+        "user_id": 1,
+        "question_id": 9,
+        "form_answer": "4.0",
+        "submitted_at": "2026-10-31:14:00:08"
+    },
+    {
+        "author_name": "mercy",
+        "answer_id": 10,
+        "user_id": 1,
+        "question_id": 10,
+        "form_answer": "9.0",
+        "submitted_at": "2026-10-31:14:09:27"
     }
 ]
